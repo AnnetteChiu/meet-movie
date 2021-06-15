@@ -1,0 +1,11 @@
+@import 'variable';
+@import 'mixin';
+@import 'reset';
+@import 'layout';
+
+//pages
+@import 'pages/index';
+@import 'pages/filmShow';
+@import 'pages/filmList';
+@import 'pages/filmRandom';
+@import 'pages/filmRanking';

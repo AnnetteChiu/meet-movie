@@ -1,0 +1,77 @@
+.filmRanking{
+  padding-top: 163px;
+  position: relative;
+  h1{
+    margin: 50px auto;
+    font-size: $fs-6xl;
+    font-weight: 600;
+    font-family: $second-font;
+    max-width: 1000px;
+  }
+}
+
+.ranking{
+  margin: 30px auto;
+  max-width: 1000px;
+}
+.rankingCard{
+  border-bottom: 1px solid rgba(255,255,255,.5);
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 0;
+  &:first-child{
+    border-top: 1px solid rgba(255,255,255,.5);
+  }
+  @include sm{
+    padding: 40px 0;
+  }
+
+  .rankingCard-img{
+    display: block;
+    margin-right: 10px;
+    max-width:100px;
+    @include sm{
+      display: none;
+    }
+  }
+
+  .rankingCard-body{
+    margin-right: 20px;
+    max-width:70%;
+  }
+  .rankingCard-title{
+    display: block;
+    font-size: $fs-3xl;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  .ranking-subtitle{
+    margin-bottom: 20px;
+    color: $secondary;
+  }
+  .ranking-description{
+    line-height: 2;
+    @include sm{
+      display: none;
+    }
+  }
+
+  .ranking-rate{
+    width: 90px;
+    height: 90px;
+    padding: 20px;
+    border-radius: 50%;
+    background: $primary;
+    font-size: $fs-4xl;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include sm{
+      width: 50px;
+      height: 50px;
+      padding: 10px;
+      font-size: $fs-2xl;
+    }
+  }
+}

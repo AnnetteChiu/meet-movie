@@ -1,0 +1,196 @@
+.filmRandom{
+  padding-top: 163px;
+  h1{
+    margin: 50px auto;
+    font-size: $fs-6xl;
+    font-weight: 600;
+    font-family: $second-font;
+    text-align: center;
+    @include sm{
+      text-align: center;
+      margin:20px 0;
+    }
+  }
+}
+
+.filmRandom-searchBar{
+  margin:50px auto;
+  max-width: 1100px;
+  @include sm{
+    margin:20px 0;
+  }
+
+  .tabBtn-filter{
+    color: #fff;
+    background-color: $primary;
+    margin-right: 10px;
+  }
+  .tab-random{
+    display: none;
+  }
+
+  &.show{
+    .tabBtn-filter{
+      color: $primary;
+      background-color: rgba($primary,0);
+    }
+    .tabBtn-random{
+      color: #fff;
+      background-color: $primary;
+    }
+    .tab-random{
+      display: block;
+    }
+    .tab-filter{
+      display: none;
+    }
+  }
+}
+
+.tabBtn{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  color: $primary;
+  a{
+    transition: all .1s;
+    font-family: $second-font;
+    display: block;
+    padding: 20px 30px 20px 30px;
+    font-size: $fs-4xl;
+    border-radius: 100px;
+    margin-top: 10px;
+    &:hover{
+      background-color: $primary;
+      color: #fff;
+    }
+    @include sm{
+      font-size: $fs-2xl;
+    }
+  }
+}
+
+.tab{
+  flex-grow: 1;
+}
+
+.tab-item{
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+
+  p{
+    //font-family: $second-font;
+    font-size: $fs-3xl;
+    margin-bottom: 20px;
+    line-height: 2;
+    @include sm{
+      font-size: $fs-2xl;
+    }
+  }
+}
+
+.tab-random{
+  .randomBtn{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: $fs-2xl;
+    padding: 20px 0;
+    background-color: $secondary;
+    color:#fff;
+    font-family: $second-font;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .25s;
+    @include sm{
+      font-size: $fs-xl;
+    }
+    &:hover{
+      background-color: $primary;
+    }
+  }
+}
+
+.filmSearchBar{
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  margin: 0 auto;
+
+  select{
+    width: 33%;
+    border: none;
+    outline: none;
+    font-size: $fs-2xl;
+    padding: 20px 20px;
+    cursor: pointer;
+    @include sm{
+      font-size: $fs-xl;
+    }
+  }
+
+  .searchByGenre{
+    border-radius: 10px 0 0 10px;
+  }
+
+  .searchBtn{
+    width: 33%;
+    border: none;
+    outline: none;
+    font-size: $fs-2xl;
+    padding: 20px 0;
+    background-color: $primary;
+    color:#fff;
+    font-family: $second-font;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    @include sm{
+      font-size: $fs-xl;
+    }
+  }
+
+}
+
+.randomCard{
+  .cards{
+    justify-content: center;
+    margin:50px 0;
+    flex-wrap: nowrap;
+    @include sm{
+      flex-wrap: wrap;
+    }
+  }
+  .card{
+    @include sm{
+      width: 100% !important;
+    }
+  }
+  .header{
+    font-size: $fs-4xl !important;
+  }
+  .description{
+    font-size: $fs-xl !important;
+  }
+}
+
+.filmRandom-results .filmList-body{
+  justify-content: center;
+  li{
+    width: 18.3%;
+    margin:2% 1px;
+
+    @include lg{
+      width: 23%;
+      padding:2% 1%;
+    }
+    @include md{
+      width: 31.33%;
+      padding:30px 5px;
+    }
+    @include sm{
+      width: 48%;
+    }
+  }
+  
+}

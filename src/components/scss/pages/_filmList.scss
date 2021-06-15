@@ -1,0 +1,39 @@
+.filmList{
+  padding-top: 163px;
+}
+
+.filmList-title{
+  font-size: $fs-4xl;
+  padding-left: 8px;
+  color:$primary;
+  .mark{
+    margin-left: 10px;
+    color: #fff;
+    font-size: $fs-5xl;
+    @include sm{
+      display: block;
+      margin: 10px 0 0 0;
+    }
+  }
+}
+.filmList-body{
+  display: flex;
+  flex-wrap: wrap;
+  li{
+    width: 16.6%;
+    padding:30px 8px;
+    @include lg{
+      width: 20%;
+    }
+    @include md{
+      width: 25%;
+      padding:30px 5px;
+    }
+    @include sm{
+      width: 50%;
+    }
+  }
+  .card{
+    text-align: center;
+  }
+}

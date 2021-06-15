@@ -1,0 +1,140 @@
+.card{
+  display: block;
+  width: 100%;
+  img {
+    display: block;
+    @include img-cover;
+    border-radius:5px
+  }
+  .card-title{
+    margin-top: 10px;
+    font-size: $fs-lg;
+    line-height: 1.5;
+  }
+  .card-description{
+    display: block;
+    color: $secondary;
+    margin: 10px 0;
+  }
+}
+
+.topSlider .swiper-container{
+  width: 100%;
+  height: 75vh;
+  @include sm{
+    height: 60vh;
+  }
+  .topSlider-card{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding:10%;
+    @include bg-center;
+  }
+  .topSlider-title{
+    font-size: $fs-5xl;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    @include sm{
+      font-size: $fs-4xl;
+    }
+  }
+  .topSlider-subtitle{
+    color: $secondary;
+    margin-bottom: 20px;
+    @include sm{
+      color: #fff;
+    }
+  }
+  .topSlider-content{
+    font-size: $fs-xl;
+    line-height: 1.5;
+    @include sm{
+      display: none;
+    }
+  }
+  .above-gradient{
+    max-width: 500px;
+    @include sm{
+      margin-left: 20px;
+    }
+  }
+
+  .swiper-button-next,.swiper-button-prev{
+    color: #fff;
+    &:after{
+      font-size: $fs-3xl;
+    }
+  }
+}
+
+.filmSlider{
+  margin: 40px 0;
+  .swiper-button-next,.swiper-button-prev{
+    color: #fff;
+    background-color:rgba($bg-color,.5);
+    top: 0;
+    bottom:0;
+    height: 100%;
+    width:2%;
+    margin-top: 0;
+    &:after{
+      font-size:$fs-xl;
+    }
+  }
+  .swiper-button-next{
+    right: 0;
+  }
+  .swiper-button-prev{
+    left:0;
+  }
+}
+.filmSlider-title{
+  font-size: $fs-2xl;
+  margin: 30px 0;
+  font-weight: 600;
+}
+
+
+
+.findBanner-title{
+  margin-bottom: 30px;
+  font-size: $fs-3xl;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.findBanner{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  a{
+    display: block;
+    height: 100px;
+    width: 49.5%;
+    border-radius: 10px;
+    font-size: $fs-5xl;
+    text-transform: uppercase;
+    line-height: 100px;
+    box-shadow: $bs-l;
+    font-family: $second-font;
+    transition: all .3s;
+    @include sm{
+      font-size: $fs-3xl;
+    }
+  }
+  .random{
+    background-color: $primary;
+    border-radius: 10px 0 0 10px;
+    @include hover-darker($primary);
+  }
+  .filter{
+    background-color: #fff;
+    color: $primary;
+    border-radius: 0 10px 10px 0;
+    @include hover-darker(#fff);
+  }
+}
