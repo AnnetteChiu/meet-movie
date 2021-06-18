@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import GoogleAuth from './GoogleAuth'
-import SearchBar from '../components/filmHome/SearchBar'
+import SearchBar from '../components/SearchBar'
 
 class Header extends React.Component {
   state = {}

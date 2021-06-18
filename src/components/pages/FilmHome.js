@@ -22,9 +22,9 @@ class FilmHome extends React.Component {
     }
     return (
       <div className="container">
-        <FilmSlider label="New release" films={this.props.trending_films} />
-        <FilmSlider label="Popular movie" films={this.props.popular_movies} />
-        <FilmSlider label="Popular TV show" films={this.props.popular_tvs} />
+        <FilmSlider label="New release" media_type="" films={this.props.trending_films} />
+        <FilmSlider label="Popular movie" media_type="movie" films={this.props.popular_movies} />
+        <FilmSlider label="Popular TV show" media_type="tv" films={this.props.popular_tvs} />
       </div>
     )
   }

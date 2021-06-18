@@ -12,7 +12,7 @@ const SlideCard = ({ film }) => {
     genre_ids.forEach((genreId) => {
       if (film.media_type === 'movie') {
         genreStr += movieGenres.filter((i) => i.id === genreId)[0].name + '・'
-      } else if (film.media_type === 'tv') {
+      } else {
         genreStr += tvGenres.filter((i) => i.id === genreId)[0].name + '・'
       }
     })
@@ -29,7 +29,7 @@ const SlideCard = ({ film }) => {
 
   return (
     <Link
-      to={`/show/${film.id}`}
+      to={`/show/${film.media_type}/${film.id}`}
       style={{ backgroundImage: `url(${imgUrl + film.backdrop_path})` }}
       className="topSlider-card around-gradient"
     >

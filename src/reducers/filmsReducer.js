@@ -1,4 +1,12 @@
-import { GET_POPULAR_MOVIE, GET_POPULAR_TV, GET_TRENDING, SEARCH_MULTI, SEARCH_MOVIE_FILTER } from '../actions/types'
+import {
+  GET_POPULAR_MOVIE,
+  GET_POPULAR_TV,
+  GET_TRENDING,
+  SEARCH_MULTI,
+  SEARCH_MOVIE_FILTER,
+  GET_FILM,
+  CLEAR_FILMDETAIL,
+} from '../actions/types'
 
 const filmReducer = (state = {}, action) => {
   switch (action.type) {
@@ -8,10 +16,14 @@ const filmReducer = (state = {}, action) => {
       return { ...state, popular_movie: action.payload }
     case GET_POPULAR_TV:
       return { ...state, popular_tv: action.payload }
+    case GET_FILM:
+      return { ...state, film_detail: action.payload }
     case SEARCH_MULTI:
       return { ...state, search_multi: action.payload }
     case SEARCH_MOVIE_FILTER:
       return { ...state, search_filter: action.payload }
+    case CLEAR_FILMDETAIL:
+      return { ...state, film_detail: null }
     default:
       return state
   }

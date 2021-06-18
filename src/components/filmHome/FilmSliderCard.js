@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { movieGenres, tvGenres } from '../data/genres'
 const imgUrl = 'https://image.tmdb.org/t/p/w500'
 
-const FilmSliderCard = ({ film }) => {
+const FilmSliderCard = ({ film, media_type }) => {
   const title = film.title ? film.title : film.name
 
   const renderGenre = (genre_ids) => {
@@ -24,7 +24,7 @@ const FilmSliderCard = ({ film }) => {
   }
 
   return (
-    <Link to={`/show/${film.id}`} className="card">
+    <Link to={`/show/${media_type ? media_type : film.media_type}/${film.id}`} className="card">
       <img src={imgUrl + film.poster_path} alt={title} />
       <p className="card-title">{title}</p>
       <span className="card-description">{renderGenre(film.genre_ids)}</span>

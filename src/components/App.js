@@ -6,7 +6,7 @@ import './scss/all.scss'
 import Header from './Header'
 import Footer from './Footer'
 import FilmHome from './pages/FilmHome'
-import FilmList from './pages/FilmList'
+import FilmSearch from './pages/FilmSearch'
 import FilmShow from './pages/FilmShow'
 import FilmRanking from './pages/FilmRanking'
 import FilmRandom from './pages/FilmRandom'
@@ -18,8 +18,8 @@ const App = () => {
         <Header />
         <Switch>
           <Route path="/" exact component={FilmHome} />
-          <Route path="/list" exact component={FilmList} />
-          <Route path="/show/:id" exact component={FilmShow} />
+          <Route path="/search/:searchKey" exact component={FilmSearch} />
+          <Route path="/show/:media_type/:id" exact component={FilmShow} />
           <Route path="/ranking" exact component={FilmRanking} />
           <Route path="/random" exact component={FilmRandom} />
         </Switch>

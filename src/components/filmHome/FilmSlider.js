@@ -43,8 +43,8 @@ class FilmSlider extends React.Component {
 
     return films.map((item) => {
       return (
-        <SwiperSlide key={item.id}>
-          <FilmSliderCard film={item} />
+        <SwiperSlide key={item.id} tag="li">
+          <FilmSliderCard media_type={this.props.media_type} film={item} />
         </SwiperSlide>
       )
     })
@@ -52,7 +52,7 @@ class FilmSlider extends React.Component {
 
   renderSwiper() {
     return (
-      <Swiper className="filmSwiper" {...config}>
+      <Swiper className="filmSwiper" tag="section" wrapperTag="ul" {...config}>
         {this.renderSlides(this.props.films)}
       </Swiper>
     )

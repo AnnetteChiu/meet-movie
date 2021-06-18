@@ -1,5 +1,8 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
+import { connect } from 'react-redux'
+import { search_multi } from '../actions'
+import history from '../history'
 
 class SearchBar extends React.Component {
   renderInput({ input }) {
@@ -7,7 +10,7 @@ class SearchBar extends React.Component {
   }
 
   onSubmit = (formValue) => {
-    // TODO: 傳回action FETCH_FILM
+    this.props.search_multi(formValue.search)
   }
 
   render() {
@@ -20,4 +23,5 @@ class SearchBar extends React.Component {
   }
 }
 
-export default reduxForm({ form: 'search' })(SearchBar)
+const connectComponent = connect(null, { search_multi })(SearchBar)
+export default reduxForm({ form: 'search' })(connectComponent)
