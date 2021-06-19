@@ -2,7 +2,6 @@ import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import { connect } from 'react-redux'
 import { search_multi } from '../actions'
-import history from '../history'
 
 class SearchBar extends React.Component {
   renderInput({ input }) {

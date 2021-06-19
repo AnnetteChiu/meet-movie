@@ -10,6 +10,7 @@ import {
   SEARCH_MOVIE_FILTER,
   GET_FILM,
   CLEAR_FILMDETAIL,
+  GET_VOTING_MOVIE,
 } from './types'
 
 import history from '../history'
@@ -30,7 +31,6 @@ export const sign_out = () => {
   }
 }
 
-// 電影人氣
 export const get_popular_movie = (page) => async (dispatch) => {
   _get_popular_movie(page, dispatch)
 }
@@ -48,7 +48,6 @@ const _get_popular_movie = _.memoize(async (page, dispatch) => {
   })
 })
 
-// 電視劇人氣
 export const get_popular_tv = (page) => async (dispatch) => {
   _get_popular_tv(page, dispatch)
 }
@@ -63,7 +62,6 @@ const _get_popular_tv = _.memoize(async (page, dispatch) => {
   })
 })
 
-//周選片
 export const get_trending = () => async (dispatch) => {
   _get_trending(dispatch)
 }
@@ -76,7 +74,6 @@ const _get_trending = _.memoize(async (dispatch) => {
   })
 })
 
-//搜尋
 export const search_multi = (inputValue) => async (dispatch) => {
   const response = await mdb.get('/search/multi', {
     params: { query: escape(inputValue) },
@@ -119,3 +116,20 @@ export const clear_filmDetail = () => {
     type: CLEAR_FILMDETAIL,
   }
 }
+
+export const get_voting_movie = (page) => async (dispatch) => {
+  _get_voting_movie(page, dispatch)
+}
+
+const _get_voting_movie = _.memoize(async (page, dispatch) => {
+  const response = await mdb.get('/discover/movie', {
+    params: {
+      sort_by: 'vote_average.desc',
+      page,
+    },
+  })
+  dispatch({
+    type: GET_VOTING_MOVIE,
+    payload: response.data.results,
+  })
+})

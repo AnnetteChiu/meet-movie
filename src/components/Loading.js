@@ -4,7 +4,6 @@ import styled from 'styled-components'
 
 const StyledLoading = styled.div`
   min-height: calc(100vh - 170px);
-  background: #1a1a1a;
   display: flex;
   flex-direction: column;
   justify-content: center;

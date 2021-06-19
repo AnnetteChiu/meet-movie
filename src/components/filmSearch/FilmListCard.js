@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { movieGenres, tvGenres } from '../data/genres'
 const imgUrl = 'https://image.tmdb.org/t/p/w500'
 const noPoster = 'https://fakeimg.pl/500x750/?text=No%20Poster'
 
