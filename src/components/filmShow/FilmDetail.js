@@ -5,7 +5,8 @@ import Breadcrumb from '../Breadcrumb'
 import MetaDetail from './MetaDetail'
 import Rating from './Rating'
 
-const imgUrl = 'https://image.tmdb.org/t/p/original'
+const imgUrl = 'https://image.tmdb.org/t/p/w500'
+const noPoster = 'https://fakeimg.pl/500x750/?text=No%20Poster'
 
 const FilmDetail = ({ film, mediaType }) => {
   const title = film.title ? film.title : film.name
@@ -13,6 +14,7 @@ const FilmDetail = ({ film, mediaType }) => {
     mediaType === 'movie' ? new Date(film.release_date).getFullYear() : new Date(film.first_air_date).getFullYear()
   const runTime = mediaType === 'movie' ? changeRuntime(film.runtime) : `${film.episode_run_time[0]} M`
   const language = mediaType === 'movie' ? film.production_countries.name : film.production_countries[0].name
+  const poster = film.poster_path ? imgUrl + film.poster_path : noPoster
 
   const genres = film.genres
     .map((i) => i.name)
@@ -46,7 +48,7 @@ const FilmDetail = ({ film, mediaType }) => {
       <Breadcrumb currentPage={film.title} />
       <div className="filmShow-main">
         <div className="filmShow-head">
-          <img src={imgUrl + film.poster_path} alt={title} />
+          <img src={poster} alt={title} />
           <div className="filmShow-title">
             <h1>
               {title}

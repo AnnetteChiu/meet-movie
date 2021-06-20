@@ -32,10 +32,6 @@ export const sign_out = () => {
 }
 
 export const get_popular_movie = (page) => async (dispatch) => {
-  _get_popular_movie(page, dispatch)
-}
-
-const _get_popular_movie = _.memoize(async (page, dispatch) => {
   const response = await mdb.get('/discover/movie', {
     params: {
       sort_by: 'popularity.desc',
@@ -46,13 +42,9 @@ const _get_popular_movie = _.memoize(async (page, dispatch) => {
     type: GET_POPULAR_MOVIE,
     payload: response.data.results,
   })
-})
-
-export const get_popular_tv = (page) => async (dispatch) => {
-  _get_popular_tv(page, dispatch)
 }
 
-const _get_popular_tv = _.memoize(async (page, dispatch) => {
+export const get_popular_tv = (page) => async (dispatch) => {
   const response = await mdb.get('/discover/tv', {
     params: { page },
   })
@@ -60,7 +52,7 @@ const _get_popular_tv = _.memoize(async (page, dispatch) => {
     type: GET_POPULAR_TV,
     payload: response.data.results,
   })
-})
+}
 
 export const get_trending = () => async (dispatch) => {
   _get_trending(dispatch)

@@ -1,25 +1,21 @@
 .filmRanking{
   padding-top: 163px;
   position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
   h1{
     margin: 50px auto;
     font-size: $fs-6xl;
     font-weight: 600;
     font-family: $second-font;
-    max-width: 1000px;
   }
 }
 
-.ranking{
-  margin: 30px auto;
-  max-width: 1000px;
-}
 .rankingCard{
   background-color: #fff;
   color:#000;
   border-radius: 5px;
   display: flex;
-  justify-content: space-between;
   padding: 20px 20px;
   margin-bottom: 50px;
 

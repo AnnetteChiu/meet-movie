@@ -1,71 +1,24 @@
 import React from 'react'
-import InfiniteScroll from 'react-infinite-scroll-component'
-import { connect } from 'react-redux'
-import { get_popular_movie } from '../../actions'
 
 import bgImg from '../../images/bg-img.jpg'
-import Ranking from '../filmRanking/Ranking'
-import RankingCard from '../filmRanking/RankingCard'
-import Loading from '../Loading'
+import MovieRanking from '../filmRanking/MovieRanking'
+import TvRanking from '../filmRanking/TvRanking'
 
 class FilmRanking extends React.Component {
-  state = {
-    page: 1,
-    films: [],
-    hasMore: true,
-  }
-
+  state = { type: 'movie' }
   componentDidMount() {
-    if (this.props.films) {
-      this.setState({ films: this.props.films })
+    window.scrollTo(0, 0)
+  }
+  renderActive = (type) => {
+    if (this.state.type === type) {
+      return 'active'
+    } else {
+      return null
     }
-    this.props.get_popular_movie(this.state.page)
   }
 
-  componentDidUpdate() {
-    if (!this.state.films.length) {
-      this.setState({ films: this.props.films })
-    }
-    this.renderRanking()
-  }
-
-  FetchData = () => {
-    if (this.state.films.length >= 81) {
-      this.setState({ hasMore: false })
-      return
-    }
-
-    this.setState({ page: this.state.page + 1 })
-    this.props.get_popular_movie(this.state.page)
-    this.setState({ films: [...this.state.films, ...this.props.films] })
-  }
-
-  renderRanking = () => {
-    return this.state.films.map((film, index) => {
-      return <RankingCard film={film} key={index} index={index} mediaType="movie" />
-    })
-  }
-
-  renderScroll = () => {
-    if (!this.state.films.length) {
-      return <Loading />
-    }
-
-    return (
-      <InfiniteScroll
-        dataLength={this.state.films.length}
-        next={this.FetchData}
-        hasMore={this.state.hasMore}
-        loader={<Loading />}
-        endMessage={
-          <p style={{ textAlign: 'center' }}>
-            <b>Yay! You have seen it all</b>
-          </p>
-        }
-      >
-        {this.renderRanking()}
-      </InfiniteScroll>
-    )
+  onButtonClick = (type) => {
+    this.setState({ type })
   }
 
   render() {
@@ -76,17 +29,25 @@ class FilmRanking extends React.Component {
         </div>
         <div className="container filmRanking">
           <h1>Top 100</h1>
-          <Ranking>{this.renderScroll()}</Ranking>
+          <div className="ui buttons" style={{ marginBottom: '30px' }}>
+            <button
+              className={`ui button inverted red ${this.renderActive('movie')}`}
+              onClick={() => this.onButtonClick('movie')}
+            >
+              MOVIE
+            </button>
+            <button
+              className={`ui button inverted red ${this.renderActive('tv')}`}
+              onClick={() => this.onButtonClick('tv')}
+            >
+              TV SHOW
+            </button>
+          </div>
+          {this.state.type === 'movie' ? <MovieRanking /> : <TvRanking />}
         </div>
       </>
     )
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    films: state.film.popular_movie,
-  }
-}
-
-export default connect(mapStateToProps, { get_popular_movie })(FilmRanking)
+export default FilmRanking

@@ -21,7 +21,7 @@ const App = () => {
           <Route path="/search/:searchKey" exact component={FilmSearch} />
           <Route path="/show/:media_type/:id" exact component={FilmShow} />
           <Route path="/ranking" exact component={FilmRanking} />
-          <Route path="/random" exact component={FilmRandom} />
+          <Route path="/random/:type" exact component={FilmRandom} />
         </Switch>
         <Footer />
       </Router>
