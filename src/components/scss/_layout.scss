@@ -256,6 +256,13 @@ header .navbar{
   }
   .copyright-statement{
     color: $secondary;
+    margin-left: 10px;
+    &:hover{
+      color: #fff;
+    }
+    @include lg{
+      margin-top: 10px;
+    }
   }
 
   @include lg{

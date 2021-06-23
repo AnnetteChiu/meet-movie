@@ -25,7 +25,9 @@ const FilmSliderCard = ({ film, media_type }) => {
 
   return (
     <Link to={`/show/${media_type ? media_type : film.media_type}/${film.id}`} className="card">
-      <img src={imgUrl + film.poster_path} alt={title} />
+      <div className="dark-hover">
+        <img src={imgUrl + film.poster_path} alt={title} />
+      </div>
       <p className="card-title">{title}</p>
       <span className="card-description">{renderGenre(film.genre_ids)}</span>
     </Link>

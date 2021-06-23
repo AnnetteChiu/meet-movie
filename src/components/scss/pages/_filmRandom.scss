@@ -1,5 +1,7 @@
 .filmRandom{
   padding-top: 163px;
+  min-height: calc(100vh - 178px);
+
   h1{
     margin: 50px auto;
     font-size: $fs-6xl;
@@ -19,40 +21,18 @@
   @include sm{
     margin:20px 0;
   }
-
-  .tabBtn-filter{
-    color: #fff;
-    background-color: $primary;
-    margin-right: 10px;
-  }
-  .tab-random{
-    display: none;
-  }
-
-  &.show{
-    .tabBtn-filter{
-      color: $primary;
-      background-color: rgba($primary,0);
-    }
-    .tabBtn-random{
-      color: #fff;
-      background-color: $primary;
-    }
-    .tab-random{
-      display: block;
-    }
-    .tab-filter{
-      display: none;
-    }
-  }
 }
 
-.tabBtn{
+.tabBtnList{
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
   color: $primary;
-  a{
+  :first-child{
+    margin-right: 5px;  
+  }
+
+  .tabBtn{
     transition: all .1s;
     font-family: $second-font;
     display: block;
@@ -60,12 +40,18 @@
     font-size: $fs-4xl;
     border-radius: 100px;
     margin-top: 10px;
+    cursor: pointer;
     &:hover{
       background-color: $primary;
       color: #fff;
     }
     @include sm{
       font-size: $fs-2xl;
+    }
+
+    &.active{
+      background-color: $primary;
+      color: #fff;
     }
   }
 }
@@ -97,8 +83,10 @@
     outline: none;
     font-size: $fs-2xl;
     padding: 20px 0;
-    background-color: $secondary;
-    color:#fff;
+    background-color: #fff;
+    color:$primary;
+    //border: 2px $primary solid;
+    box-shadow: 0 0 10px 4px rgba(#aaa ,.6);
     font-family: $second-font;
     border-radius: 10px;
     cursor: pointer;
@@ -108,6 +96,7 @@
     }
     &:hover{
       background-color: $primary;
+      color:#fff;
     }
   }
 }
@@ -130,7 +119,7 @@
     }
   }
 
-  .searchByGenre{
+  .first-radius{
     border-radius: 10px 0 0 10px;
   }
 
@@ -167,10 +156,11 @@
     }
   }
   .header{
-    font-size: $fs-4xl !important;
+    font-size: $fs-2xl !important;
+    margin-bottom: 10px;
   }
   .description{
-    font-size: $fs-xl !important;
+    line-height: 1.5;
   }
 }
 
@@ -194,3 +184,4 @@
   }
   
 }
+

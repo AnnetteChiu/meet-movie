@@ -33,9 +33,11 @@ class Footer extends React.Component {
             </li>
           </ul>
           <p className="copyright-statement">
-            © PeiHsin Wang source code 非商業使用
-            <a href="https://www.themoviedb.org/"> The Movie Database</a>
+            <a href="https://github.com/pepe1113">© 2021 PeiHsin Wang source code </a>
           </p>
+          <div className="copyright-statement">
+            <a href="https://www.themoviedb.org/">Data Source: The Movie Database</a>
+          </div>
         </div>
       </footer>
     )

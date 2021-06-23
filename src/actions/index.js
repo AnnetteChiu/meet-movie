@@ -11,6 +11,7 @@ import {
   GET_FILM,
   CLEAR_FILMDETAIL,
   GET_VOTING_MOVIE,
+  CREATE_NUMBER,
 } from './types'
 
 import history from '../history'
@@ -81,8 +82,8 @@ export const search_multi = (inputValue) => async (dispatch) => {
 export const search_movie_filter = (language, genreId) => async (dispatch) => {
   const response = await mdb.get('/discover/movie', {
     params: {
-      with_genres: genreId,
-      with_original_language: language,
+      with_genres: genreId === 'all' ? '' : genreId,
+      with_original_language: language === 'all' ? '' : language,
     },
   })
   dispatch({
@@ -117,6 +118,7 @@ const _get_voting_movie = _.memoize(async (page, dispatch) => {
   const response = await mdb.get('/discover/movie', {
     params: {
       sort_by: 'vote_average.desc',
+      'vote_count.gte': 500,
       page,
     },
   })
@@ -125,3 +127,10 @@ const _get_voting_movie = _.memoize(async (page, dispatch) => {
     payload: response.data.results,
   })
 })
+
+export const create_number = (numArr) => {
+  return {
+    type: CREATE_NUMBER,
+    payload: numArr,
+  }
+}

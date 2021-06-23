@@ -6,7 +6,7 @@ import {
   SEARCH_MOVIE_FILTER,
   GET_FILM,
   CLEAR_FILMDETAIL,
-  GET_VOTING_MOVIE,
+  CREATE_NUMBER,
 } from '../actions/types'
 
 const filmReducer = (state = {}, action) => {
@@ -22,11 +22,11 @@ const filmReducer = (state = {}, action) => {
     case SEARCH_MULTI:
       return { ...state, search_multi: action.payload }
     case SEARCH_MOVIE_FILTER:
-      return { ...state, search_filter: action.payload }
+      return { ...state, filter: action.payload }
     case CLEAR_FILMDETAIL:
       return { ...state, film_detail: null }
-    case GET_VOTING_MOVIE:
-      return { ...state, movie_ranking: action.payload }
+    case CREATE_NUMBER:
+      return { ...state, random_numbers: action.payload }
     default:
       return state
   }

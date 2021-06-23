@@ -19,7 +19,7 @@ class Header extends React.Component {
         </div>
         <ul className="navbar">
           <li>
-            <Link to="/random/">Find a Series</Link>
+            <Link to="/random/filter">Find a Series</Link>
           </li>
           <li>
             <Link to="/ranking">Top 100</Link>
