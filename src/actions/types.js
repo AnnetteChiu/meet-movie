@@ -9,3 +9,8 @@ export const GET_FILM = 'GET_FILM'
 export const CLEAR_FILMDETAIL = 'CLEAR_FILMDETAIL'
 export const GET_VOTING_MOVIE = 'GET_VOTING_MOVIE'
 export const CREATE_NUMBER = 'CREATE_NUMBER'
+
+export const GET_WISHLIST = 'GET_WISHLIST'
+export const CLEAR_WISHLIST = 'CLEAR_WISHLIST'
+export const ADD_WISH = 'ADD_WISH'
+export const DELETE_WISH = 'DELETE_WISH'

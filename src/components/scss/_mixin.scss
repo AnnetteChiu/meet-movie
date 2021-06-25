@@ -64,20 +64,7 @@
   }
 }
 
-@mixin loginBtn($color) {
-  color: #fff;
-  background-color: #595d66;
-  padding: 10px 15px;
-  border-radius: 500px;
-  outline: none;
-  border: 0;
-  transition: all 0.3s;
-  box-shadow: $bs-l;
-  &:hover {
-    background-color: $color;
-    transform: scale(1.1);
-  }
-}
+
 
 //父層要加上position:relative
 @mixin img-center {

@@ -1,12 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Field, reduxForm, formValueSelector } from 'redux-form'
+import { Field, reduxForm } from 'redux-form'
 import { search_movie_filter } from '../../actions'
 import FilterGenres from '../data/FilterGenres'
 import Languages from '../data/Languages'
 
-const TabFilter = (props) => {
-  const { handleSubmit, filterValue, search_movie_filter, loaderTimer } = props
+const TabFilter = ({ handleSubmit, search_movie_filter, loaderTimer }) => {
   const renderOptions = (options) => {
     return options.map((option) => {
       return (
@@ -17,9 +16,9 @@ const TabFilter = (props) => {
     })
   }
 
-  const onSubmit = (filterValue) => {
-    const language = filterValue.language
-    const genre = filterValue.genre
+  const onSubmit = (formValues) => {
+    const language = formValues.language
+    const genre = formValues.genre
     search_movie_filter(language, genre)
     loaderTimer()
   }
@@ -55,12 +54,4 @@ const FormComponent = reduxForm({
   form: 'FilterValues',
 })(TabFilter)
 
-const selector = formValueSelector('FilterValues')
-const mapStateToProps = (state) => {
-  const filterValue = selector(state, 'genre', 'language')
-  return {
-    filterValue,
-  }
-}
-
-export default connect(mapStateToProps, { search_movie_filter })(FormComponent)
+export default connect(null, { search_movie_filter })(FormComponent)

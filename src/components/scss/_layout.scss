@@ -14,6 +14,8 @@
     display: none !important;
   }
 }
+
+
 .menu{
   display: none;
   padding: 10px;
@@ -123,6 +125,7 @@ header{
   font-size: $fs-5xl;
   font-weight:900;
   font-family: $second-font;
+  line-height: 1.4;
   .fas{
     color:$primary;
     margin-right: 5px;
@@ -160,18 +163,31 @@ header{
   right: 13px;
 }
 
-.loginBtn{
-  @include loginBtn($primary);
-  margin-left: 10px;
 
-  .fab {
+.loginBtn{
+  background-color: rgba(255,255,255,0);
+  color: #fff;
+  border: 2px #fff solid;
+  padding: 7px 10px;
+  border-radius: 500px;
+  outline: none;
+  transition: all 0.3s;
+  box-shadow: $bs-l;
+  margin-left: 10px;
+  text-align: center;
+
+  .google {
     transition: all 0.5s;
-    margin-right: 10px;
-    transform: translate(50%, 0);
+    margin-right: 5px;
+    transform: translate(70%, 0);
     opacity: 0;
   }
-  &:hover{
-    .fab {
+
+  &:hover {
+    color: #000;
+    background-color: rgba(255,255,255,1);
+    transform: scale(1.1);
+    .google {
       opacity: 1;
       transform: translate(0, 0);
     }
@@ -188,8 +204,16 @@ header{
     }
   }
 
+  &.active{
+    color: #000;
+    background-color: rgba(255,255,255,1);
+  }
 }
 
+.loginGroup{
+  display: flex;
+  align-items: center;
+}
 
 header .navbar{
   display: flex;
@@ -210,7 +234,6 @@ header .navbar{
     a{
       margin: 0;
     }
-    
   }
 }
 

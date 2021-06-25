@@ -4,6 +4,7 @@ import ShareButtons from './ShareButtons'
 import Breadcrumb from '../Breadcrumb'
 import MetaDetail from './MetaDetail'
 import Rating from './Rating'
+import WishlistButton from './WishlistButton'
 
 const imgUrl = 'https://image.tmdb.org/t/p/w500'
 const noPoster = 'https://fakeimg.pl/500x750/?text=No%20Poster'
@@ -13,7 +14,7 @@ const FilmDetail = ({ film, mediaType }) => {
   const year =
     mediaType === 'movie' ? new Date(film.release_date).getFullYear() : new Date(film.first_air_date).getFullYear()
   const runTime = mediaType === 'movie' ? changeRuntime(film.runtime) : `${film.episode_run_time[0]} M`
-  const language = mediaType === 'movie' ? film.production_countries.name : film.production_countries[0].name
+  const language = film.production_countries[0].name
   const poster = film.poster_path ? imgUrl + film.poster_path : noPoster
 
   const genres = film.genres
@@ -57,7 +58,8 @@ const FilmDetail = ({ film, mediaType }) => {
             <p>{genres}</p>
             <p>{runTime}</p>
             <p>{language}</p>
-            <Rating rate={film.vote_average} />
+            <Rating rate={film.vote_average * 10} />
+            <WishlistButton film={film} mediaType={mediaType} />
           </div>
         </div>
         <div className="filmShow-body">

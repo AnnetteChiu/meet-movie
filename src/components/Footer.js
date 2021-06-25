@@ -9,21 +9,20 @@ class Footer extends React.Component {
         <div className="concept">
           <h3>OUR CONCEPT</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem voluptate, cumque et consectetur, modi est
-            in odit quas, explicabo dicta necessitatibus facere assumenda non molestias nobis voluptatem iure sint
-            ipsum!
+            We collect the information of movies and TV shows for movie FANs! Here is the Newest or the most popular
+            movies & TV shows. When you come to homepage, you'll got what the trending films are right now, just click
+            and take a peek at cast or tralier if you want. Also you can search films by keywords (English), Or take a
+            look at Top100, ranking sorted by popularity. If you really have no idea (I know, too hard to choose :o ),
+            try out 'Find a Series', we'll pick some films for you guys!
           </p>
         </div>
         <div className="footer-nav container">
           <Link to="/" className="footer-logo">
-            <i className="fas fa-broadcast-tower"></i>Asia Movie
+            <i className="fas fa-broadcast-tower"></i>Meet Movie
           </Link>
           <ul className="navbar">
             <li>
-              <Link to="/list">Browse All</Link>
-            </li>
-            <li>
-              <Link to="/random">Find a Series</Link>
+              <Link to="/random/filter">Find a Series</Link>
             </li>
             <li>
               <Link to="/ranking">Top 100</Link>

@@ -11,9 +11,9 @@ class Header extends React.Component {
       <header className="container">
         <div className="preheader">
           <Link to="/" className="logo">
-            <i className="fas fa-broadcast-tower"></i>Asia Movie
+            <i className="fas fa-broadcast-tower m-none"></i>
+            Meet Movie
           </Link>
-
           <SearchBar />
           <GoogleAuth />
         </div>

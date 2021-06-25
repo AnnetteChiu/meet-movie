@@ -1,5 +1,7 @@
 import _ from 'lodash'
 import mdb from '../api/themoviedb'
+import wishlist from '../api/wishlist'
+
 import {
   SIGN_IN,
   SIGN_OUT,
@@ -12,6 +14,10 @@ import {
   CLEAR_FILMDETAIL,
   GET_VOTING_MOVIE,
   CREATE_NUMBER,
+  GET_WISHLIST,
+  CLEAR_WISHLIST,
+  ADD_WISH,
+  DELETE_WISH,
 } from './types'
 
 import history from '../history'
@@ -132,5 +138,42 @@ export const create_number = (numArr) => {
   return {
     type: CREATE_NUMBER,
     payload: numArr,
+  }
+}
+
+export const get_wishlist = () => async (dispatch, getState) => {
+  const { userId } = getState().auth
+  const response = await wishlist.get('/users', {
+    params: {
+      userId: userId,
+    },
+  })
+  dispatch({
+    type: GET_WISHLIST,
+    payload: {
+      userId: userId,
+      id: response.data.length ? response.data[0].id : null,
+      wishlist: response.data.length ? response.data[0].wishlist : [],
+    },
+  })
+}
+
+export const clear_wishlist = () => {
+  return {
+    type: CLEAR_WISHLIST,
+  }
+}
+
+export const add_wish = (film) => {
+  return {
+    type: ADD_WISH,
+    payload: film,
+  }
+}
+
+export const delete_wish = (filmId) => {
+  return {
+    type: DELETE_WISH,
+    payload: filmId,
   }
 }
