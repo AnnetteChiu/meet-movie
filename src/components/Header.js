@@ -5,7 +5,6 @@ import GoogleAuth from './GoogleAuth'
 import SearchBar from '../components/SearchBar'
 
 class Header extends React.Component {
-  state = {}
   render() {
     return (
       <header className="container">
@@ -23,6 +22,9 @@ class Header extends React.Component {
           </li>
           <li>
             <Link to="/ranking">Top 100</Link>
+          </li>
+          <li>
+            <Link to="/wishlist">WishList</Link>
           </li>
         </ul>
       </header>

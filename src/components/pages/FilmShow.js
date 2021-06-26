@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { get_film, clear_filmDetail } from '../../actions'
+import { get_film, clear_filmDetail, update_wishlist } from '../../actions'
 import FilmDetail from '../filmShow/FilmDetail'
 import BackgroundImage from '../filmShow/BackgroundImage'
 import Loading from '../Loading'
@@ -19,6 +19,7 @@ class FilmShow extends React.Component {
 
   componentWillUnmount() {
     this.props.clear_filmDetail()
+    this.props.update_wishlist()
   }
 
   renderFilmDetail() {
@@ -46,6 +47,6 @@ const mapStateToProps = (state) => {
   return { film: state.film.film_detail }
 }
 
-export default connect(mapStateToProps, { get_film, clear_filmDetail })(FilmShow)
+export default connect(mapStateToProps, { get_film, clear_filmDetail, update_wishlist })(FilmShow)
 
 // this.props.match.params.id

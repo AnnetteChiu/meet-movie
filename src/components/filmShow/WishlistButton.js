@@ -13,6 +13,10 @@ class WishlistButton extends React.Component {
   }
 
   onButtonClick = () => {
+    if (!this.props.isSignedIn) {
+      alert('Please sign in your google account')
+      return
+    }
     if (this.props.isWishlist) {
       this.props.delete_wish(this.props.id)
     } else {
@@ -44,11 +48,12 @@ class WishlistButton extends React.Component {
 const mapStateToProps = (state) => {
   const id = state.film.film_detail.id
   const wishlist = state.wishlist.wishlist
-  const isWishlist = state.wishlist.wishlist.some((i) => i.filmId === id)
+  const isWishlist = state.wishlist.wishlist && state.wishlist.wishlist.some((i) => i.filmId === id)
   return {
     id,
     wishlist,
     isWishlist,
+    isSignedIn: state.auth.isSignedIn,
   }
 }
 

@@ -10,6 +10,7 @@ import FilmSearch from './pages/FilmSearch'
 import FilmShow from './pages/FilmShow'
 import FilmRanking from './pages/FilmRanking'
 import FilmRandom from './pages/FilmRandom'
+import Wishlist from './pages/Wishlist'
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/show/:media_type/:id" exact component={FilmShow} />
           <Route path="/ranking" exact component={FilmRanking} />
           <Route path="/random/:type" exact component={FilmRandom} />
+          <Route path="/wishlist" exact component={Wishlist} />
         </Switch>
         <Footer />
       </Router>

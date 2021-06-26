@@ -9,11 +9,14 @@ class Footer extends React.Component {
         <div className="concept">
           <h3>OUR CONCEPT</h3>
           <p>
-            We collect the information of movies and TV shows for movie FANs! Here is the Newest or the most popular
-            movies & TV shows. When you come to homepage, you'll got what the trending films are right now, just click
-            and take a peek at cast or tralier if you want. Also you can search films by keywords (English), Or take a
-            look at Top100, ranking sorted by popularity. If you really have no idea (I know, too hard to choose :o ),
-            try out 'Find a Series', we'll pick some films for you guys!
+            We collect the information of movies and TV shows for movie FANs! Welcome to MEET MOVIE!
+            <br />
+            <span className="m-none">
+              When you come to homepage, you'll got what the trending films are right now, just click and take a peek at
+              cast or tralier if you want. Also you can search films by keywords, Or take a look at Top100, ranking
+              sorted by popularity. If you really have no idea (I know, too hard to choose ), try out 'Find a Series',
+              we'll pick some films for you guys!
+            </span>
           </p>
         </div>
         <div className="footer-nav container">

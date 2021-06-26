@@ -28,9 +28,9 @@ class FilmSearch extends React.Component {
   render() {
     return (
       <div className="container filmList">
-        <p className="filmList-title">
+        <h1 className="filmList-title">
           Search Result <span className="mark">{this.props.search}</span>
-        </p>
+        </h1>
         {!this.props.searchResult || this.props.searchResult.length === 0 ? <NoResult /> : ''}
         <FilmList>{this.renderCard()}</FilmList>
       </div>

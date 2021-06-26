@@ -1,7 +1,6 @@
 import _ from 'lodash'
 import mdb from '../api/themoviedb'
 import wishlist from '../api/wishlist'
-
 import {
   SIGN_IN,
   SIGN_OUT,
@@ -18,11 +17,13 @@ import {
   CLEAR_WISHLIST,
   ADD_WISH,
   DELETE_WISH,
+  UPDATE_WISHLIST,
 } from './types'
 
 import history from '../history'
 
 export const sign_in = (userId, userName) => {
+  history.push('/')
   return {
     type: SIGN_IN,
     payload: {
@@ -176,4 +177,21 @@ export const delete_wish = (filmId) => {
     type: DELETE_WISH,
     payload: filmId,
   }
+}
+
+export const update_wishlist = () => async (dispatch, getState) => {
+  const userWishlist = getState().wishlist
+  let response
+  if (userWishlist.id) {
+    // 曾經使用過的user
+    response = await wishlist.put(`users/${userWishlist.id}`, userWishlist)
+  } else {
+    // 第一次來的人，不會有id
+    response = await wishlist.post('users', userWishlist)
+  }
+
+  dispatch({
+    type: UPDATE_WISHLIST,
+    payload: response.data,
+  })
 }

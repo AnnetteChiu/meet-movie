@@ -1,0 +1,90 @@
+.wishlist{
+  padding: 163px 3rem 0;
+  min-height: calc(100vh - 220px);
+
+  @include lg{
+    min-height: calc(100vh - 350px);
+  }
+  @include md{
+    min-height: calc(100vh - 400px);
+  }
+  @include sm{
+    min-height: calc(100vh - 460px);
+    padding: 163px 1rem 0;
+  }
+
+}
+
+.alertBlock{
+  text-align: center;
+
+  .alert{
+    font-size: $fs-2xl;
+    line-height: 1.5;
+  }
+}
+
+.wishlist-title{
+  font-size: $fs-4xl;
+  font-family: $second-font;
+  margin-bottom: 2rem;
+  margin-left: 5px;
+}
+
+.wishlist-cardGroup{
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 50px;
+}
+
+.wishlist-card{
+  width: 20%;
+  padding: 0 10px;
+  margin-bottom: 1rem;
+
+  @include lg{
+    width: 25%;
+  }
+  @include md{
+    width: 33.33%;
+  }
+  @include sm{
+    width: 50%;
+  }
+
+  .card-img{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: $bs-xl;
+
+    img{
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &:hover {
+      &:before{
+        content: 'More';
+        font-size: 1.5em;
+        position: absolute;
+        top: calc(50% - 0.75em);
+        left: calc(50% - 2ch);
+        z-index: 5;
+        color: #fff;
+      }
+    }
+  }
+
+  .card-title{
+    font-size: $fs-lg;
+    line-height: 1.5;
+  }
+
+  .card-detail{
+    font-size: $fs-lg;
+    color: $secondary;
+  }
+}
