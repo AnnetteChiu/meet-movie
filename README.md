@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# Meet Movie
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Meet Movie](https://asian-films.vercel.app/)
 
-## Available Scripts
+## Concept
 
-In the project directory, you can run:
+彙整 TMBD 電影資料庫的電影網站，讓有選擇障礙的人可以快速瞭解時下流行或高評價的電影和電視劇。
+若不知道要看什麼電影，點選 BY RANDOM 或 BY FILTER 讓我們從眾多電影中，隨機幫你挑幾部好戲。或是從 TOP100 中看到牌行前百名的電影和電視劇，也可以搜尋特定關鍵字。
+資料庫來源：[The Movie Database](https://www.themoviedb.org/)
 
-### `npm start`
+We collect the information of movies and TV shows for movie FANs! Welcome to MEET MOVIE!
+When you come to homepage, you'll got what the trending films are right now, just click and take a peek at cast or tralier if you want. Also you can search films by keywords, Or take a look at Top100, ranking sorted by popularity. If you really have no idea (I know, too hard to choose ), try out 'Find a Series', we'll pick some films for you guys!
+Data Base：[The Movie Database](https://www.themoviedb.org/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## What you can do
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- 搜尋電影 Search
+- 隨機推薦 3 部片 Find a Series
+- 條件篩選影片 Find a Series
+- 電影/劇集排行 Top 100
+- google 登入 google account signIn
+- 加入/移除心願清單 add/remove wishlist
+- 分享到社群媒體 share to social media
 
-### `npm test`
+## Libraries & FrameWorks
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- React.js
+- React redux
+- css-sass
+- infinite scroll
+- Google OAth2
+- Swiper
+- The Movie Database (TMDb)
+- Social media share
