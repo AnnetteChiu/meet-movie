@@ -15,7 +15,7 @@ class Wishlist extends React.Component {
     return wishlist.map((film) => {
       const id = film.filmId
       const title = film.title
-      const image = film.backdrop_path ? imgUrl + film.poster_path : noPoster
+      const image = film.poster_path ? imgUrl + film.poster_path : noPoster
       const mediaType = film.media_type === 'movie' ? 'Movie' : 'TV show'
 
       return (
