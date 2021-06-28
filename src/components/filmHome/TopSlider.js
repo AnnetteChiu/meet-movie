@@ -32,7 +32,8 @@ class TopSlider extends React.Component {
     if (!this.props.trending_films) {
       return
     }
-    return this.props.trending_films.map((film) => {
+    return this.props.trending_films.map((film, index) => {
+      if (index > 4) return null
       return (
         <SwiperSlide key={film.id} tag="li">
           <SlideCard film={film} />

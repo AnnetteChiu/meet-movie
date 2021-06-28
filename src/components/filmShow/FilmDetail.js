@@ -13,8 +13,13 @@ const FilmDetail = ({ film, mediaType }) => {
   const title = film.title ? film.title : film.name
   const year =
     mediaType === 'movie' ? new Date(film.release_date).getFullYear() : new Date(film.first_air_date).getFullYear()
-  const runTime = mediaType === 'movie' ? changeRuntime(film.runtime) : `${film.episode_run_time[0]} M`
-  const language = film.production_countries[0].name
+
+  const runTime =
+    mediaType === 'movie'
+      ? film.runtime > 0 && changeRuntime(film.runtime)
+      : film.episode_run_time[0] > 0 && `${film.episode_run_time[0]} M`
+
+  const language = film.production_countries.length ? film.production_countries[0].name : ''
   const poster = film.poster_path ? imgUrl + film.poster_path : noPoster
 
   const genres = film.genres

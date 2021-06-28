@@ -1,4 +1,4 @@
-import _ from 'lodash'
+import _, { replace } from 'lodash'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
@@ -11,6 +11,7 @@ const Vote = styled.div`
 
 const RankingCard = ({ film, index, mediaType }) => {
   const title = film.title ? film.title : film.name
+  const date = film.release_date ? film.release_date.replace(/-/g, ' / ') : '--'
   const overview = _.truncate(film.overview, {
     length: 150,
     separator: ' ',
@@ -27,7 +28,7 @@ const RankingCard = ({ film, index, mediaType }) => {
           <span>{`${index + 1}. `}</span>
           {title}
         </Link>
-        <p className="ranking-subtitle">{film.release_date}</p>
+        <p className="ranking-subtitle">{`release: ${date}`}</p>
         <p className="ranking-description">{overview}</p>
       </div>
       <Vote>

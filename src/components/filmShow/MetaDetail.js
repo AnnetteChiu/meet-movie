@@ -4,7 +4,7 @@ const MetaDetail = ({ text, label }) => {
   return (
     <div className="metaDetail">
       <h4>{label}</h4>
-      <p>{text}</p>
+      <p>{text ? text : '-'}</p>
     </div>
   )
 }

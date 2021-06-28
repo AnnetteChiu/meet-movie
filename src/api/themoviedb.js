@@ -8,7 +8,8 @@ export default axios.create({
   baseURL: 'https://api.themoviedb.org/3/',
   params: {
     api_key: api_key,
-    //language: language,
+    // region: 'TW',
+    // language: language,
     // with_original_language: 'ja|zh|ko|th',
     // without_genres: '16',
   },
