@@ -8,6 +8,7 @@ import NoResult from '../NoResult'
 
 class FilmSearch extends React.Component {
   componentDidMount() {
+    window.scrollTo(0, 0)
     this.props.search_multi(this.props.match.params.searchKey)
   }
 

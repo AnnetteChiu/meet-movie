@@ -16,6 +16,7 @@ class FilmRandom extends React.Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0)
     this.props.get_voting_movie(1)
     this.props.get_voting_movie(2)
     this.props.get_voting_movie(3)

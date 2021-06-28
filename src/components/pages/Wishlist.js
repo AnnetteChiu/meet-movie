@@ -7,6 +7,7 @@ const noPoster = 'https://fakeimg.pl/500x750/?text=No%20Poster'
 
 class Wishlist extends React.Component {
   componentDidUpdate() {
+    window.scrollTo(0, 0)
     this.renderList()
   }
 
