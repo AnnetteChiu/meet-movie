@@ -1,8 +1,8 @@
 # 🎞️ Meet Movie
 
-## [Meet Movie](https://asian-films.vercel.app/)
+## [Meet Movie](https://meet-movie.netlify.app/)
 
-<a href='https://asian-films.vercel.app/' target='_blank'>
+<a href='https://meet-movie.netlify.app/' target='_blank'>
 <img src='./src/images/logo.JPG' alt='meet movie logo' />
 </a>
 
