@@ -2,9 +2,9 @@
 
 ### [Meet Movie](https://asian-films.vercel.app/)
 
-[架構規劃whimscal](https://whimsical.com/asiafilm-3Ev7HpLwBpJLeM5iWQei8Z)
-
-![alt text](./src/images/logo.JPG)
+<a href='https://asian-films.vercel.app/' target='_blank'>
+<img src='./src/images/logo.JPG' alt='meet movie logo' />
+</a>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/GZgAFB5YZco" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
