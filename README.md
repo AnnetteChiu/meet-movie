@@ -10,7 +10,7 @@
 
 > DEMO VIDEO (Youtube)
 
-[![demo video](./src/images/video.JPG)](https://www.youtube.com/embed/GZgAFB5YZco)
+[![demo video](./src/images/video.jpg)](https://www.youtube.com/embed/GZgAFB5YZco)
 
 [架構規劃 whimscal](https://whimsical.com/asiafilm-3Ev7HpLwBpJLeM5iWQei8Z)
 
