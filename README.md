@@ -1,12 +1,16 @@
 # 🎞️ Meet Movie
 
-### [Meet Movie](https://asian-films.vercel.app/)
+## [Meet Movie](https://asian-films.vercel.app/)
 
 <a href='https://asian-films.vercel.app/' target='_blank'>
 <img src='./src/images/logo.JPG' alt='meet movie logo' />
 </a>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GZgAFB5YZco" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br/>
+
+> DEMO VIDEO (Youtube)
+
+[![demo video](./src/images/video.JPG)](https://www.youtube.com/embed/GZgAFB5YZco)
 
 [架構規劃 whimscal](https://whimsical.com/asiafilm-3Ev7HpLwBpJLeM5iWQei8Z)
 
