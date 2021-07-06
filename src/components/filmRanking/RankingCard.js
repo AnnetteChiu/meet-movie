@@ -3,7 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-const imgUrl = 'https://image.tmdb.org/t/p/w500'
+const imgUrl = 'https://image.tmdb.org/t/p/w342'
 
 const Vote = styled.div`
   min-width: 100px;

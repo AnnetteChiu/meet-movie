@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-const imgUrl = 'https://image.tmdb.org/t/p/w500'
+const imgUrl = 'https://image.tmdb.org/t/p/w342'
 const noPoster = 'https://fakeimg.pl/500x750/?text=No%20Poster'
 
 const FilmListCard = ({ film, media }) => {

@@ -2,7 +2,7 @@ import _ from 'lodash'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { movieGenres, tvGenres } from '../data/genres'
-const imgUrl = 'https://image.tmdb.org/t/p/original'
+const imgUrl = 'https://image.tmdb.org/t/p/w1280'
 
 const SlideCard = ({ film }) => {
   const title = film.title ? film.title : film.name

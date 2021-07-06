@@ -6,7 +6,7 @@ import MetaDetail from './MetaDetail'
 import Rating from './Rating'
 import WishlistButton from './WishlistButton'
 
-const imgUrl = 'https://image.tmdb.org/t/p/w500'
+const imgUrl = 'https://image.tmdb.org/t/p/w342'
 const noPoster = 'https://fakeimg.pl/500x750/?text=No%20Poster'
 
 const FilmDetail = ({ film, mediaType }) => {
